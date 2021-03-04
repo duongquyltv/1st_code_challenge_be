@@ -1,0 +1,33 @@
+version: '3'
+
+networks: 
+  app-challenge:
+    driver: bridge
+
+services: 
+  challenge-nginx:
+    image: nginx:1.19-alpine
+    container_name: challenge-nginx
+    ports: 
+      - 80:80
+      - 443:443
+    links: 
+      - challenge-php
+    volumes: 
+      - ./docker/nginx/conf.d/:/etc/nginx/templates/
+    networks: 
+      - app-challenge
+    env_file: 
+      - ./docker/environments/${ENV_NODE:-develop}.env
+
+  challenge-php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile'
+    container_name: challenge-php
+    ports: 
+      - 9000:9000
+    networks: 
+      - app-challenge 
+    env_file: 
+      - ./docker/environments/${ENV_NODE:-develop}.env
