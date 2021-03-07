@@ -1,7 +1,7 @@
 # Code Challenge
 * Phát triển API xem tất cả thành viên trong một công ty, công ty tổ chức phân cấp như sau:
 
-<img src="https://drive.google.com/file/d/10z89zTnvEFWdXsqfCGPkXQEb71aJTxw1/view"/>
+![departments](https://user-images.githubusercontent.com/70365305/110230798-1b74a680-7f46-11eb-9a12-5c6026fd5760.png)
 
 1. Đứng đầu là giám đốc.
 2. Mỗi phòng ban do một người quản lý
@@ -26,7 +26,7 @@
 
 # Architecture
 
-<img src="https://drive.google.com/file/d/1zgbh4NEsu9jRyXxkx2GfCV-aLYC46AG2/view"/>
+![architecture](https://user-images.githubusercontent.com/70365305/110230796-1a437980-7f46-11eb-873a-80d9853e7962.png)
 
 
 # Services
