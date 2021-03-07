@@ -97,6 +97,6 @@ $ docker-compose up -d
 You must run it to generate database demo and swagger.
 ```
 make php
-php artisan migrate: refresh --seed
-php artisan l5-swagger: generate
+php artisan migrate:refresh --seed
+php artisan l5-swagger:generate
 ```
